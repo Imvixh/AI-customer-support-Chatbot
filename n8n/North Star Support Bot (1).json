@@ -1,0 +1,869 @@
+{
+  "name": "North Star Support Bot",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "chatbot",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "position": [
+        -1984,
+        528
+      ],
+      "id": "ff16a553-1866-482a-818c-798c7d5820ba",
+      "typeVersion": 2.1,
+      "webhookId": "688f9ce2-3365-480b-afa1-4d941fe43cf8"
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "loose",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "7367a524-a7cd-441f-aa77-dd26346ce751",
+                    "leftValue": "={{ $json.body.message.toLowerCase().trim() }}",
+                    "rightValue": "package",
+                    "operator": {
+                      "type": "string",
+                      "operation": "contains"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "loose",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json.body.message.toLowerCase().trim() }}",
+                    "rightValue": "order",
+                    "operator": {
+                      "type": "string",
+                      "operation": "contains"
+                    },
+                    "id": "55980a8f-d404-4c02-9aae-0c227f8fa70c"
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "loose",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "02778f03-7770-45fb-804b-af9c63e99c49",
+                    "leftValue": "={{ $json.body.message.toLowerCase().trim() }}",
+                    "rightValue": "suggest",
+                    "operator": {
+                      "type": "string",
+                      "operation": "contains"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "loose",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "75af1302-286c-4074-8c19-f623ab4a98d1",
+                    "leftValue": "={{ $json.body.message.toLowerCase().trim() }}",
+                    "rightValue": "recommend",
+                    "operator": {
+                      "type": "string",
+                      "operation": "contains"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "loose",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "6fa53e45-673d-4ba4-8ece-1ea949f02c8c",
+                    "leftValue": "={{ $json.body.message.toLowerCase().trim() }}",
+                    "rightValue": "return",
+                    "operator": {
+                      "type": "string",
+                      "operation": "contains"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "loose",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "c98ca6ee-73b5-42ef-9283-870f13d3db62",
+                    "leftValue": "={{ $json.body.message.toLowerCase().trim() }}",
+                    "rightValue": "agent",
+                    "operator": {
+                      "type": "string",
+                      "operation": "contains"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "loose",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "6c19dc13-eb66-497d-b462-fb19e1a299fd",
+                    "leftValue": "={{ $json.body.message.toLowerCase().trim() }}",
+                    "rightValue": "shipping",
+                    "operator": {
+                      "type": "string",
+                      "operation": "contains"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "loose",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "4a273a80-dd1d-4a9a-bd02-0d56ee304414",
+                    "leftValue": "={{ $json.body.message.toLowerCase().trim() }}",
+                    "rightValue": "camping",
+                    "operator": {
+                      "type": "string",
+                      "operation": "contains"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "loose",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "13ec018c-e3c9-46e0-8b04-8a192cc483d3",
+                    "leftValue": "={{ $json.body.message.toLowerCase().trim() }}",
+                    "rightValue": "hiking",
+                    "operator": {
+                      "type": "string",
+                      "operation": "contains"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "loose",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "28c1c849-4bbb-4f6e-ae76-4395d955ecbf",
+                    "leftValue": "={{ $json.body.message.toLowerCase().trim() }}",
+                    "rightValue": "winter gear",
+                    "operator": {
+                      "type": "string",
+                      "operation": "contains"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            }
+          ]
+        },
+        "looseTypeValidation": true,
+        "options": {
+          "fallbackOutput": "extra"
+        }
+      },
+      "name": "Switch 1 (Intent)",
+      "type": "n8n-nodes-base.switch",
+      "position": [
+        -1248,
+        496
+      ],
+      "id": "61c8e908-3957-40e4-bac7-e684710e8a79",
+      "typeVersion": 3.4
+    },
+    {
+      "parameters": {
+        "mode": "raw",
+        "jsonOutput": "{\n  \"reply\": \"Enter_the_Order_Number (111/222/333).\"\n}\n",
+        "includeOtherFields": true,
+        "options": {}
+      },
+      "name": "Ask Order Number",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        -480,
+        368
+      ],
+      "id": "e631127b-27ee-45f9-8f42-4d4706288d2c",
+      "typeVersion": 3.5
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "loose",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ ($json.body?.message ?? $json.message ?? \"\").toString().trim() }}",
+                    "rightValue": "111",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "a02f5d2a-7324-48f3-9398-a2f680689c5a"
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "loose",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "143a5642-81a1-4a42-843c-d11c490f6008",
+                    "leftValue": "={{ ($json.body?.message ?? $json.message ?? \"\").toString().trim() }}",
+                    "rightValue": "222",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "loose",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "30fc6421-cef7-4da3-9f63-e4d798c9ca26",
+                    "leftValue": "={{ ($json.body?.message ?? $json.message ?? \"\").toString().trim() }}",
+                    "rightValue": "333",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "loose",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "1211b8ff-9f2f-419d-97b0-cf07a8f64f68",
+                    "leftValue": "={{ ($json.body?.message ?? $json.message ?? \"\").toString().trim() }}",
+                    "rightValue": "^(\\d+)$",
+                    "operator": {
+                      "type": "string",
+                      "operation": "regex"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            }
+          ]
+        },
+        "looseTypeValidation": true,
+        "options": {
+          "fallbackOutput": "none"
+        }
+      },
+      "name": "Switch 2 (Order Check)",
+      "type": "n8n-nodes-base.switch",
+      "position": [
+        -1248,
+        224
+      ],
+      "id": "4b20e229-3e3a-4b9b-ba55-eccb397ab789",
+      "typeVersion": 3.4
+    },
+    {
+      "parameters": {
+        "mode": "raw",
+        "jsonOutput": "{\n  \"reply\": \"Order 111: Your order has been shipped.\"\n}\n",
+        "options": {}
+      },
+      "name": "Order 111",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        -480,
+        -480
+      ],
+      "id": "a183d139-48c6-40f4-96d2-2aa1ad7b5998",
+      "typeVersion": 3.5
+    },
+    {
+      "parameters": {
+        "mode": "raw",
+        "jsonOutput": "{\n  \"reply\": \"Order 222: Your order is being processed.\"\n}\n",
+        "options": {}
+      },
+      "name": "Order 222",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        -480,
+        -256
+      ],
+      "id": "aed12094-ec69-4d5d-bbec-1b02f7d9dd18",
+      "typeVersion": 3.5
+    },
+    {
+      "parameters": {
+        "mode": "raw",
+        "jsonOutput": "{\n  \"reply\": \"Order 333: Your order is delivered.\"\n}\n",
+        "options": {}
+      },
+      "name": "Order 333",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        -480,
+        -32
+      ],
+      "id": "b7312b23-e855-4e77-b282-c58bbde232da",
+      "typeVersion": 3.5
+    },
+    {
+      "parameters": {
+        "mode": "raw",
+        "jsonOutput": "{\n  \"reply\": \"What are you looking for?\\n1. Hiking\\n2. Camping\\n3. Winter Gear\"\n}\n",
+        "options": {}
+      },
+      "name": "Recommend",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        -480,
+        528
+      ],
+      "id": "ebe64112-f588-412f-bfaf-3a10d2d370c7",
+      "typeVersion": 3.5
+    },
+    {
+      "parameters": {
+        "mode": "raw",
+        "jsonOutput": "{\n  \"reply\": \"📦 Return Policy:\\n- 30-day returns\\n- Items must be unused\\n- Original packaging required\\n\\nVisit: example.com/returns\"\n}\n",
+        "options": {}
+      },
+      "name": "Return",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        -480,
+        704
+      ],
+      "id": "b9f64eee-c4c8-4a2a-931a-2d5f0fae5a21",
+      "typeVersion": 3.5
+    },
+    {
+      "parameters": {
+        "mode": "raw",
+        "jsonOutput": "{\n  \"reply\": \"Sorry, I didn’t understand that.\\n\\nChoose:\\n1. Track Order\\n2. Returns\\n3. Recommendations\\n4. Agent\"\n}\n",
+        "options": {}
+      },
+      "name": "Fallback",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        -480,
+        1536
+      ],
+      "id": "4abb9385-90dd-4899-9757-4198fbe4e6d8",
+      "typeVersion": 3.5
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ $json }}",
+        "options": {}
+      },
+      "name": "Respond to Webhook",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "position": [
+        896,
+        400
+      ],
+      "id": "44c13a35-5620-4ae0-88c3-cccbd4841f84",
+      "typeVersion": 1.5
+    },
+    {
+      "parameters": {
+        "mode": "raw",
+        "jsonOutput": "{\n  \"reply\": \"👤 Connecting you to a live agent...\\n\\nType 'menu' to return.\"\n}\n",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.5,
+      "position": [
+        -480,
+        864
+      ],
+      "id": "5ad06b5a-53ac-4b12-841c-ead47b1fafb7",
+      "name": "agent"
+    },
+    {
+      "parameters": {
+        "mode": "raw",
+        "jsonOutput": "{\n  \"reply\": \"Invalid order ID. Please check and try again.\"\n}\n",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.5,
+      "position": [
+        -480,
+        144
+      ],
+      "id": "2845cd8f-d778-4926-9fb4-404f88a4dea1",
+      "name": "invalid id"
+    },
+    {
+      "parameters": {
+        "mode": "raw",
+        "jsonOutput": "{\n  \"reply\": \"Standard shipping: 3-5 business days\\nExpedited shipping: 1-2 business days\"\n}\n",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.5,
+      "position": [
+        -480,
+        992
+      ],
+      "id": "9eae2fb1-b0e7-45bd-a3d9-3cba61851843",
+      "name": "Shipping"
+    },
+    {
+      "parameters": {
+        "mode": "raw",
+        "jsonOutput": "{\n  \"reply\": \"I recommend \\n1camping gear \\n2 tents \\n3 outdoor equipment\"\n}\n",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.5,
+      "position": [
+        -480,
+        1120
+      ],
+      "id": "313d34ed-f770-4855-9cd2-1d1996b8eae1",
+      "name": "Camping"
+    },
+    {
+      "parameters": {
+        "mode": "raw",
+        "jsonOutput": "{\n  \"reply\": \"For hiking, I recommend checking out our hiking gear such as \\n1 backpacks\\n2 trekking shoes\\n3 weather-resistant jackets.\"\n}\n",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.5,
+      "position": [
+        -480,
+        1264
+      ],
+      "id": "0a3bb557-7f95-4f99-b983-06e9d730adac",
+      "name": "Hiking"
+    },
+    {
+      "parameters": {
+        "mode": "raw",
+        "jsonOutput": "{\n  \"reply\": \"For winter Gear, I recommend checking out our winter gear collection, including \\n1 insulated jackets \\n2 thermal wear\\n3 gloves\\n4 waterproof boots\"\n}\n",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.5,
+      "position": [
+        -480,
+        1392
+      ],
+      "id": "b2976edf-d8d5-4588-ae6f-49e467d1b6fb",
+      "name": "Winter Gear"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Switch 2 (Order Check)",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Switch 1 (Intent)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Switch 1 (Intent)": {
+      "main": [
+        [
+          {
+            "node": "Ask Order Number",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Ask Order Number",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Recommend",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Recommend",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Return",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "agent",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Shipping",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Camping",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Hiking",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Winter Gear",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Fallback",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ask Order Number": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Switch 2 (Order Check)": {
+      "main": [
+        [
+          {
+            "node": "Order 111",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Order 222",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Order 333",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "invalid id",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Order 111": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Order 222": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Order 333": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Recommend": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Return": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Fallback": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "agent": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "invalid id": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Shipping": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Camping": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Hiking": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Winter Gear": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate",
+    "availableInMCP": false
+  },
+  "versionId": "b86ebada-7494-4265-9647-4590a390fd6a",
+  "meta": {
+    "instanceId": "3ddbb3cba05613365923a410d66e751f63c3b5fb2f79ba6dc70db652b5a87b1e"
+  },
+  "nodeGroups": [],
+  "id": "omXeVtJH8e03bra0",
+  "tags": []
+}
