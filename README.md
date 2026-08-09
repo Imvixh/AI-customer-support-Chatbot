@@ -79,11 +79,6 @@ This project is a customer support chatbot built for an outdoor e-commerce busin
 3. Open `index.html`
 4. Start chatting
 
----
-
-## 🎥 Demo Video
-
-(Attach your video link here)
 
 ---
 
